@@ -1,23 +1,37 @@
-<div>
-  <form>
-    <h1>Registro de Produto</h1>
-    <div>
-      <label for="ID">Id</label>
-      <input type="text" name="ID" id="ID">
-      <label for="Name">Nome</label>
-      <input type="text" name="Name" id="Name">
-    </div>
-    <div>
-      <label for="Description">Descrição</label>
-      <textarea type="text" name="Description" id="Description"></textarea>
-    </div>
-    <div>
-      <label for="Price">Preço</label>
-      <input type="text" name="Price" id="Price">
-      <label for="Quantity">Quantidade</label>
-      <input type="text" name="Quantity" id="Quantity">
-    </div>
-    <button type="submit">Enviar</button>
-  </form>
+<div class="d-flex justify-content-center align-items-center text-center vh-100">
+  <div class="card text-white bg-dark p-5">
+    <form>
+      <h1 class=" mb-3">Product Registration</h1>
+      <div class="row mb-3">
+        <div class="input-group col">
+          <input class="form-control" type="number" name="ID" id="ID" placeholder="Enter ID">
+          <span class="input-group-text"><i class="bi bi-list-ol"></i></span>
+        </div>
+        <div class="input-group col">
+          <input class="form-control" type="text" name="Name" id="Name" placeholder="Enter the name">
+          <span class="input-group-text"><i class="bi bi-card-text"></i></span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <textarea class="form-control" type="text" name="Description" id="Description" placeholder="Enter the description"></textarea>
+          <span class="input-group-text"><i class="bi bi-body-text"></i></span>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="input-group col">
+          <span class="input-group-text">R$</span>
+          <input class="form-control" type="number" name="Price" id="Price" placeholder="Enter the price">
+          <span class="input-group-text"><i class="bi bi-tags"></i></span>
+        </div>
+        <div class="input-group col">
+          <input class="form-control" type="number" name="Quantity" id="Quantity" placeholder="Enter the quantity">
+          <span class="input-group-text"><i class="bi bi-reception-4"></i></span>
+        </div>
+      </div>
+      <div class="row mx-auto">
+        <button class="btn btn-light" type="submit">Submit <i class="bi bi-box-arrow-in-right"></i></button>
+      </div>
+    </form>
+  </div>
 </div>
-
