@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from './Product';
+import { Product } from '../Product';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
