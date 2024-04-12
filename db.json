@@ -4,22 +4,29 @@
       "id": 1,
       "name": "Primeiro",
       "description": "Descrição",
-      "price": 10.00,
+      "price": 10,
       "quantity": 100
     },
     {
       "id": 2,
       "name": "Segundo",
       "description": "Descrição",
-      "price": 20.00,
+      "price": 20,
       "quantity": 200
     },
     {
       "id": 3,
       "name": "Terceiro",
       "description": "Descrição",
-      "price": 30.00,
+      "price": 30,
       "quantity": 300
+    },
+    {
+      "id": 4,
+      "name": "Quarto",
+      "description": "Descrição",
+      "price": 40,
+      "quantity": 400
     }
   ]
 }

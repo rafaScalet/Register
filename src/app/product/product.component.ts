@@ -14,11 +14,11 @@ export class ProductComponent implements OnInit{
 
   constructor(private formBuilder: FormBuilder, private service: ProductService) {
     this.catchFormGroup = formBuilder.group({
-      ID: [''],
-      Name: [''],
-      Description: [''],
-      Price: [''],
-      Quantity: [''],
+      id: [''],
+      name: [''],
+      description: [''],
+      price: [''],
+      quantity: [''],
     });
   }
 
@@ -29,6 +29,8 @@ export class ProductComponent implements OnInit{
   }
 
   submit() {
-    this.product.push(this.catchFormGroup.value);
+    this.service.save(this.catchFormGroup.value).subscribe({
+      next: data => this.product.push(data)
+    })
   }
 }

@@ -4,33 +4,29 @@
       <h1 class=" mb-3">Product Registration</h1>
       <div class="row mb-3">
         <div class="input-group col">
-          <input class="form-control" formControlName="ID" type="number" name="ID" id="ID" placeholder="Enter ID">
-          <span class="input-group-text"><i class="bi bi-list-ol"></i></span>
-        </div>
-        <div class="input-group col">
-          <input class="form-control" formControlName="Name" type="text" name="Name" id="Name" placeholder="Enter the name">
+          <input class="form-control" formControlName="name" type="text" name="name" id="name" placeholder="Enter the name">
           <span class="input-group-text"><i class="bi bi-card-text"></i></span>
         </div>
       </div>
       <div class="mb-3">
         <div class="input-group">
-          <textarea class="form-control" formControlName="Description" type="text" name="Description" id="Description" placeholder="Enter the description"></textarea>
+          <textarea class="form-control" formControlName="description" type="text" name="description" id="description" placeholder="Enter the description"></textarea>
           <span class="input-group-text"><i class="bi bi-body-text"></i></span>
         </div>
       </div>
       <div class="row mb-3">
         <div class="input-group col">
           <span class="input-group-text">R$</span>
-          <input class="form-control" formControlName="Price" type="number" name="Price" id="Price" placeholder="Enter the price">
+          <input class="form-control" formControlName="price" type="number" name="price" id="price" placeholder="Enter the price">
           <span class="input-group-text"><i class="bi bi-tags"></i></span>
         </div>
         <div class="input-group col">
-          <input class="form-control" formControlName="Quantity" type="number" name="Quantity" id="Quantity" placeholder="Enter the quantity">
+          <input class="form-control" formControlName="quantity" type="number" name="quantity" id="quantity" placeholder="Enter the quantity">
           <span class="input-group-text"><i class="bi bi-reception-4"></i></span>
         </div>
       </div>
       <div class="row mx-auto mb-3">
-        <button class="btn btn-light" (click)="submit()" type="submit">Submit <i class="bi bi-box-arrow-in-right"></i></button>
+        <button class="btn btn-light" (click)="submit()" type="submit">save <i class="bi bi-box-arrow-in-right"></i></button>
       </div>
       <div class="card p-1">
           <table class="table table-hover">
