@@ -1,3 +1,4 @@
+import { ProductComponent } from './product/product.component';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from './Product';
@@ -11,11 +12,15 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getProduct() : Observable<Product[]>{
+  getProduct(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url);
   }
 
-  save(product: Product) : Observable<Product>{
+  submit(product: Product): Observable<Product> {
     return this.http.post<Product>(this.url, product)
+  }
+
+  delete(product: Product): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${product.id}`)
   }
 }

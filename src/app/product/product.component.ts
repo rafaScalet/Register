@@ -22,15 +22,28 @@ export class ProductComponent implements OnInit{
     });
   }
 
-  ngOnInit(): void {
+  loadProduct(){
     this.service.getProduct().subscribe({
       next: data => this.product = data
     });
   }
 
+  ngOnInit(): void {
+    this.loadProduct();
+  }
+
   submit() {
-    this.service.save(this.catchFormGroup.value).subscribe({
-      next: data => this.product.push(data)
+    this.service.submit(this.catchFormGroup.value).subscribe({
+      next: data => {
+        this.product.push(data);
+        this.catchFormGroup.reset();
+      }
+    })
+  }
+
+  delete(product: Product){
+    this.service.delete(product).subscribe({
+      next: () => this.loadProduct()
     })
   }
 }

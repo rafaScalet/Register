@@ -4,57 +4,62 @@
       <h1 class=" mb-3">Product Registration</h1>
       <div class="row mb-3">
         <div class="input-group col">
-          <input class="form-control" formControlName="name" type="text" name="name" id="name" placeholder="Enter the name">
+          <input class="form-control" formControlName="name" type="text" name="name" id="name"
+            placeholder="Enter the name">
           <span class="input-group-text"><i class="bi bi-card-text"></i></span>
         </div>
       </div>
       <div class="mb-3">
         <div class="input-group">
-          <textarea class="form-control" formControlName="description" type="text" name="description" id="description" placeholder="Enter the description"></textarea>
+          <textarea class="form-control" formControlName="description" type="text" name="description" id="description"
+            placeholder="Enter the description"></textarea>
           <span class="input-group-text"><i class="bi bi-body-text"></i></span>
         </div>
       </div>
       <div class="row mb-3">
         <div class="input-group col">
           <span class="input-group-text">R$</span>
-          <input class="form-control" formControlName="price" type="number" name="price" id="price" placeholder="Enter the price">
+          <input class="form-control" formControlName="price" type="number" name="price" id="price"
+            placeholder="Enter the price">
           <span class="input-group-text"><i class="bi bi-tags"></i></span>
         </div>
         <div class="input-group col">
-          <input class="form-control" formControlName="quantity" type="number" name="quantity" id="quantity" placeholder="Enter the quantity">
+          <input class="form-control" formControlName="quantity" type="number" name="quantity" id="quantity"
+            placeholder="Enter the quantity">
           <span class="input-group-text"><i class="bi bi-reception-4"></i></span>
         </div>
       </div>
       <div class="row mx-auto mb-3">
-        <button class="btn btn-light" (click)="submit()" type="submit">save <i class="bi bi-box-arrow-in-right"></i></button>
+        <button class="btn btn-light" (click)="submit()" type="submit">save <i
+            class="bi bi-box-arrow-in-right"></i></button>
       </div>
       <div class="card p-1">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Options</th>
-              </tr>
-            </thead>
-            <tbody class="table-group-divider">
-              <tr *ngFor="let catch of product">
-                <th scope="row">#{{ catch.id }}</th>
-                <td>{{ catch.name }}</td>
-                <td>{{ catch.description }}</td>
-                <td>R$ {{ catch.price.toFixed(2) }}</td>
-                <td>{{ catch.quantity }}</td>
-                <td>
-                  <button class="btn btn-danger me-2"><i class="bi bi-trash3"></i></button>
-                  <button class="btn btn-success"><i class="bi bi-pen"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let catch of product">
+              <th scope="row">{{ catch.id }}</th>
+              <td>{{ catch.name }}</td>
+              <td>{{ catch.description }}</td>
+              <td>R$ {{ catch.price.toFixed(2) }}</td>
+              <td>{{ catch.quantity }}</td>
+              <td>
+                <button class="btn btn-danger me-2" (click)="delete(catch)"><i class="bi bi-trash3"></i></button>
+                <button class="btn btn-success"><i class="bi bi-pen"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </form>
   </div>
 </div>
