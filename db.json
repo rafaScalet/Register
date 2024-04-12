@@ -27,6 +27,20 @@
       "description": "Descrição",
       "price": 40,
       "quantity": 400
+    },
+    {
+      "id": 5,
+      "name": "Quinto",
+      "description": "Descrição",
+      "price": 50,
+      "quantity": 500
+    },
+    {
+      "id": 6,
+      "name": "Sexto",
+      "description": "Descrição",
+      "price": 60,
+      "quantity": 600
     }
   ]
 }
